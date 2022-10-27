@@ -1,10 +1,10 @@
 package com.bbc.criticaltechworks.di
 
 import com.bbc.criticaltechworks.BuildConfig
-import com.bbc.criticaltechworks.data.remote.ApiService
-import com.bbc.criticaltechworks.data.remote.RemoteDataSource
-import com.bbc.criticaltechworks.data.remote.RemoteDataSourceImpl
-import com.zubi.muzyk.util.NetworkInterceptor
+import com.bbc.criticaltechworks.feature_news.data.data_source.remote.ApiService
+import com.bbc.criticaltechworks.feature_news.data.data_source.remote.api.RemoteDataSource
+import com.bbc.criticaltechworks.feature_news.data.data_source.remote.api.RemoteDataSourceImpl
+import com.bbc.criticaltechworks.util.NetworkInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

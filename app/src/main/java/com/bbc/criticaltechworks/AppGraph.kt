@@ -1,16 +1,19 @@
+@file:Suppress("DEPRECATION")
+
 package com.bbc.criticaltechworks
 
 import androidx.compose.runtime.Composable
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.bbc.criticaltechworks.data.local.entity.Article
-import com.bbc.criticaltechworks.ui.screen.detail.DetailScreen
-import com.bbc.criticaltechworks.ui.screen.home.HomeScreen
-import com.bbc.criticaltechworks.ui.screen.splash.SplashScreen
-import com.bbc.criticaltechworks.util.CustomNavType
-import com.bbc.criticaltechworks.util.biometricPresent
+import com.bbc.criticaltechworks.feature_news.domain.model.Article
+import com.bbc.criticaltechworks.feature_news.presentation.detail.DetailScreen
+import com.bbc.criticaltechworks.feature_news.presentation.home.HomeScreen
+import com.bbc.criticaltechworks.feature_biometric.presentation.splash.SplashScreen
+import com.bbc.criticaltechworks.common.utils.CustomNavType
+import com.bbc.criticaltechworks.common.utils.biometricPresent
 
 
 object Routes {
@@ -21,7 +24,7 @@ object Routes {
 
 
 @Composable
-fun AppGraph(mainViewModel: MainViewModel) {
+fun AppGraph() {
 
     val navHostController = rememberNavController()
 
@@ -31,11 +34,11 @@ fun AppGraph(mainViewModel: MainViewModel) {
     ) {
 
         composable(route = Routes.SPLASH) {
-            SplashScreen(navHostController, mainViewModel)
+            SplashScreen(navHostController)
         }
 
         composable(route = Routes.HOME) {
-            HomeScreen(navHostController, mainViewModel)
+            HomeScreen(navHostController, hiltViewModel())
         }
 
         composable(
@@ -48,8 +51,7 @@ fun AppGraph(mainViewModel: MainViewModel) {
             if (artistEntity != null) {
                 DetailScreen(
                     artistEntity,
-                    navHostController,
-                    mainViewModel
+                    navHostController
                 )
             }
         }

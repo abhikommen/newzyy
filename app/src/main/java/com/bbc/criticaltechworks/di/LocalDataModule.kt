@@ -2,10 +2,10 @@ package com.bbc.criticaltechworks.di
 
 import android.content.Context
 import androidx.room.Room
-import com.bbc.criticaltechworks.data.local.LocalDataSource
-import com.bbc.criticaltechworks.data.local.LocalDataSourceImpl
-import com.bbc.criticaltechworks.data.local.dao.AppDatabase
-import com.bbc.criticaltechworks.data.local.dao.Dao
+import com.bbc.criticaltechworks.feature_news.data.data_source.local.api.LocalDataSource
+import com.bbc.criticaltechworks.feature_news.data.data_source.local.api.LocalDataSourceImpl
+import com.bbc.criticaltechworks.feature_news.data.data_source.local.AppDatabase
+import com.bbc.criticaltechworks.feature_news.data.data_source.local.Dao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

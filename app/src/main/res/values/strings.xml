@@ -9,4 +9,5 @@
     <string name="biometric_found_message">Biometric found. Touch your finger on scanner 👆🏻</string>
     <string name="biometric_not_found_message">Biometric Not Found</string>
     <string name="retrying">Retrying</string>
+    <string name="something_went_wrong">Something went wrong</string>
 </resources>

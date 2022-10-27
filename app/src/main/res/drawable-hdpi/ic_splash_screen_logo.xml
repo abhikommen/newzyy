@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:width="50dp"
+        android:height="50dp"
+        android:drawable="@drawable/ic_launcher"
+        android:gravity="center"
+        tools:ignore="UnusedAttribute" />
+</layer-list>

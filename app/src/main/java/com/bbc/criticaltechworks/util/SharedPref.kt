@@ -1,7 +1,7 @@
 package com.zubi.muzyk.util
 
 import android.content.Context
-import com.bbc.criticaltechworks.util.appContext
+import com.bbc.criticaltechworks.common.utils.appContext
 
 
 object SharedPref {

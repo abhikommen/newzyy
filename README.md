@@ -31,18 +31,8 @@ https://github.com/Zlagi/blogfy-api 🔥
 
 ## Screenshots ✨
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/63319103/161010016-3ec51ddf-c9ab-4579-88ef-612bfc8c1683.png" width="230px" />
-  <img src="https://user-images.githubusercontent.com/63319103/160952314-43895146-09b0-46c2-9dee-3fa932d2c9f9.png" width="230px" />
-  <img src="https://user-images.githubusercontent.com/63319103/160952387-1e7383a6-806d-479e-8485-c2e21712e5eb.png" width="230px" />
-  <img src="https://user-images.githubusercontent.com/63319103/160952466-1f7c491e-5bc3-4d74-a01b-55f5c52ccd8d.png" width="230px" />
-  <img src="https://user-images.githubusercontent.com/63319103/160952856-0407ea51-c097-4c83-bee9-1739879ce9b6.png" width="230px" />
-  <img src="https://user-images.githubusercontent.com/63319103/160952516-95f53eff-b59b-4e72-8265-e7f284c247d8.png" width="230px" />
-  <img src="https://user-images.githubusercontent.com/63319103/161479220-e872ea47-3aa9-4c47-8b14-9516ef1a6538.png" width="230px" />
-  <img src="https://user-images.githubusercontent.com/63319103/160952811-940782c2-3f3e-4fd3-97dc-29416fdd124d.png" width="230px" />
-  <img src="https://user-images.githubusercontent.com/63319103/160953300-ac2b0d4e-4f8b-402f-81b8-df5585120c7a.png" width="230px" />
-  <img src="https://user-images.githubusercontent.com/63319103/160953344-00476cc3-a879-4303-ac36-3889cf04f036.png" width="230px" />
-  <img src="https://user-images.githubusercontent.com/63319103/160953399-936bcb2a-6884-4260-b152-3be2ad1d7d0a.png" width="230px" />
-  <img src="https://user-images.githubusercontent.com/63319103/160953554-f7a1da23-91d9-41db-972c-30bb984789c3.png" width="230px" />
+  <img src="https://user-images.githubusercontent.com/30040958/198406961-41132141-250b-4db8-9b82-f6eafc12c347.jpg" width="230px" />
+  <img src="https://user-images.githubusercontent.com/30040958/198406941-30db3658-287d-4ef2-bfad-51e00731bf40.jpg" width="230px" />
   </div>
 
 ## Built with 🛠

@@ -27,46 +27,52 @@ https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=$API_KEY 🔥
 - [x] Fetch blogs from NewsApi
 - [x] Tests (mocks and fakes).
 
+
+## Project Structure :
+
+<img src="https://user-images.githubusercontent.com/30040958/198729388-10e7f079-d6bd-4aac-87b3-40250039770e.png">
+
+
 ## Constraints fulfilled :
 
-• The app is written in Kotlin.
-• The app is targeting latest android version platform 33.
-• The app must is built using Android Studio 3.0+.
-• The app supports both portrait and landscape modes without crashing at any time.
-• The app is using using Retrofit2+ for HTTP/REST and GSON for JSON.
-• The app includes unit tests
+- The app is written in Kotlin. 
+- The app is targeting latest android version platform 33.
+- The app must is built using Android Studio 3.0+.
+- The app supports both portrait and landscape modes without crashing at any time.
+- The app is using using Retrofit2+ for HTTP/REST and GSON for JSON.
+- The app includes unit tests
 
 ## Story 1: When the user launches the application, he should land in a screen where is possible to see top headlines for the specific news source
 
 ### Criteria Fulfilled:
 
-• News provider name should be showed as a screen title 2. Headlines are presented in a list format. ✅
-• Each cell should present the headline title ✅
-• Headlines must be sorted by date ✅
-• The user must be able to scroll through the list of headlines ✅
-Each cell should present headline image, if available (download and cache it, don’t
+- News provider name should be showed as a screen title 2. Headlines are presented in a list format. ✅
+- Each cell should present the headline title ✅
+- Headlines must be sorted by date ✅
+- The user must be able to scroll through the list of headlines ✅ 
+-Each cell should present headline image, if available (download and cache it, don’t
 bundle it) ✅
 
 ## Story 2: When the user taps on a headline, he should be taken to a new screen
 
 ### Criteria Fulfilled:
 
-• Tapping on a headline presents a new screen. ✅
-• Image, title, description and content should be displayed, if available ✅
+- Tapping on a headline presents a new screen. ✅
+- Image, title, description and content should be displayed, if available ✅
 
 ## Bonus Story 3: When user opens the application, it should ask for a fingerprint identification, if available
 
 ### Criteria Fulfilled:
 
-• If the device has a fingerprint scanner and it’s configured in the device, user should be required to use it when he opens the application ✅
-• If the device doesn’t have fingerprint scanner or it’s not configured, then it should open normally ✅
+- If the device has a fingerprint scanner and it’s configured in the device, user should be required to use it when he opens the application ✅
+- If the device doesn’t have fingerprint scanner or it’s not configured, then it should open normally ✅
 
 ## Bonus Story 4: A new flavor should be created to present news for another source
 
 ### Acceptance criteria:**
 
-• User should land in a different news source if running another target ✅
-• Headlines should be presented according to the target that was selected ✅
+- User should land in a different news source if running another target ✅
+- Headlines should be presented according to the target that was selected ✅
 
 ## Product Flavors
 
@@ -75,10 +81,6 @@ There are two flavors that present news for different-different sources. CNN and
 
     productFlavors {
         bbcNews {
-            // Assigns this product flavor to the "version" flavor dimension.
-            // If you are using only one dimension, this property is optional,
-            // and the plugin automatically assigns all the module's flavors to
-            // that dimension.
             dimension "version"
             applicationIdSuffix ".bbc"
             versionNameSuffix "-bbc"

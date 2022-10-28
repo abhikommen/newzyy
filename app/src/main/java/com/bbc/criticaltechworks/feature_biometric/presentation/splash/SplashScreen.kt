@@ -15,12 +15,14 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.bbc.criticaltechworks.R
 import com.bbc.criticaltechworks.Routes
-import com.bbc.criticaltechworks.common.utils.VerticalSpacer
-import com.bbc.criticaltechworks.common.utils.appContext
+import com.bbc.criticaltechworks.appContext
+import com.bbc.criticaltechworks.common.components.VerticalSpacer
+import com.bbc.criticaltechworks.common.utils.withAlpha
 import com.bbc.criticaltechworks.feature_biometric.domain.util.BiometricStatus
 import com.bbc.criticaltechworks.feature_biometric.domain.util.BiometricUtil
 
@@ -87,7 +89,6 @@ fun SplashScreenBody(
         }
     }
 
-
     Box(
         modifier = modifier
             .fillMaxSize()
@@ -103,11 +104,15 @@ fun SplashScreenBody(
                 contentDescription = "fingerprint image",
                 modifier = Modifier
                     .size(100.dp)
-                    .background(Color.Blue.copy(alpha = 0.02f), shape = CircleShape)
+                    .background(Color.Blue.withAlpha(0.02f), shape = CircleShape)
                     .padding(20.dp)
             )
             VerticalSpacer(size = 20)
-            Text(text = message, textAlign = TextAlign.Center)
+            Text(
+                text = message,
+                fontSize = 20.sp,
+                textAlign = TextAlign.Center
+            )
         }
 
     }

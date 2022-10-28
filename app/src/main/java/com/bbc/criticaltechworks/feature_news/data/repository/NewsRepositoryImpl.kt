@@ -16,21 +16,16 @@ class NewsRepositoryImpl @Inject constructor(
     private val localDataSource: LocalDataSource,
 ) : NewsRepository {
 
-    override fun getArticle(): Flow<DataState<List<Article>>> = flow {
-        try {
-            emit(DataState.Loading)
-            val remoteArticles = remoteDataSource.getHeadLines().articles
-            localDataSource.insertArticles(remoteArticles)
-            emit(DataState.Success(remoteArticles))
-        } catch (e: Exception) {
-            val localSavedArticles = localDataSource.getAllArticles()
-            if (localSavedArticles.isNotEmpty()) {
-                emit((DataState.Success(localSavedArticles)))
-            } else {
-                when(e){
-                    is UnknownHostException -> emit(DataState.Error(Exception("Internet Not Found. ")))
-                }
-            }
-        }
+
+    override suspend fun getRemoteArticle(): List<Article> {
+        return remoteDataSource.getHeadLines().articles
+    }
+
+    override suspend fun saveArticleInCache(articleList: List<Article>) {
+        return localDataSource.insertArticles(articleList)
+    }
+
+    override suspend fun getCachedArticle(): List<Article> {
+        return localDataSource.getAllArticles()
     }
 }

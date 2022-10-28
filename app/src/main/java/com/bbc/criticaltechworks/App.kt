@@ -4,6 +4,11 @@ import android.app.Application
 import android.content.Context
 import dagger.hilt.android.HiltAndroidApp
 
+val appContext = App.appContext
+
+/**
+ * Application class
+ */
 @HiltAndroidApp
 class App : Application() {
 

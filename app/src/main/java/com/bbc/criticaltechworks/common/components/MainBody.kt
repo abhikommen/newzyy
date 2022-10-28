@@ -1,23 +1,24 @@
 package com.bbc.criticaltechworks.common.components
 
-import android.annotation.SuppressLint
+import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
+import androidx.compose.material.Surface
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 import com.bbc.criticaltechworks.AppGraph
-import com.google.accompanist.insets.ProvideWindowInsets
-import com.google.accompanist.insets.navigationBarsPadding
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
-@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
+/**
+ * Main Root Composable of the Application.  Here, the navigation bar is set to black and the
+ * status bar is set to translucent to fit the application's aesthetic.
+ */
 @Composable
 fun MainBody() {
-    ProvideWindowInsets {
-        val context = LocalContext.current
+    Surface {
         val systemUiController = rememberSystemUiController()
         SideEffect {
             systemUiController
@@ -26,12 +27,11 @@ fun MainBody() {
         }
 
         val scaffoldState = rememberScaffoldState()
-
         Scaffold(
             scaffoldState = scaffoldState,
             modifier = Modifier.navigationBarsPadding(),
         ) {
-            AppGraph()
+            AppGraph(Modifier.padding(it))
         }
     }
 

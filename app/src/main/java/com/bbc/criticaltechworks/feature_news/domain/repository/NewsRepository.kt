@@ -5,5 +5,7 @@ import com.bbc.criticaltechworks.common.utils.DataState
 import kotlinx.coroutines.flow.Flow
 
 interface NewsRepository {
-    fun getArticle(): Flow<DataState<List<Article>>>
+    suspend fun getRemoteArticle(): List<Article>
+    suspend fun saveArticleInCache(articleList: List<Article>)
+    suspend fun getCachedArticle(): List<Article>
 }

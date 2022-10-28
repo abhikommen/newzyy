@@ -17,7 +17,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -26,7 +25,12 @@ import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.bbc.criticaltechworks.R
 import com.bbc.criticaltechworks.Routes
-import com.bbc.criticaltechworks.common.utils.*
+import com.bbc.criticaltechworks.common.components.HorizontalSpacer
+import com.bbc.criticaltechworks.common.components.VerticalSpacer
+import com.bbc.criticaltechworks.common.utils.fifty
+import com.bbc.criticaltechworks.common.utils.getHoursAgo
+import com.bbc.criticaltechworks.common.utils.scrollFadeImage
+import com.bbc.criticaltechworks.common.utils.ten
 import com.bbc.criticaltechworks.feature_news.domain.model.Article
 import com.bbc.criticaltechworks.ui.theme.CRITICAL_BLUE
 import com.bbc.criticaltechworks.ui.theme.CRITICAL_GRAY
@@ -101,7 +105,6 @@ fun ArticleMetaData(article: Article, modifier: Modifier = Modifier) {
     Text(
         text = article.title ?: stringResource(R.string.unknown),
         color = MaterialTheme.colors.onBackground,
-        fontWeight = FontWeight.SemiBold,
         fontSize = 17.sp
     )
     Text(

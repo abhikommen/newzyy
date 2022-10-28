@@ -29,6 +29,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import coil.compose.AsyncImage
 import com.bbc.criticaltechworks.R
+import com.bbc.criticaltechworks.common.components.HorizontalSpacer
+import com.bbc.criticaltechworks.common.components.VerticalSpacer
 import com.bbc.criticaltechworks.common.utils.*
 import com.bbc.criticaltechworks.feature_news.domain.model.Article
 import com.bbc.criticaltechworks.ui.theme.CRITICAL_BLUE

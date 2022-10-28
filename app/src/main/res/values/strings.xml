@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">Critical TechWorks</string>
+    <string name="app_name">Newzyy</string>
     <string name="read_more">Read More</string>
     <string name="source">Source</string>
     <string name="unknown">Unknown</string>
     <string name="biometric_na_message">Biometric not found</string>
     <string name="biometric_failed_message">Authentication failed! ❌</string>
     <string name="biometric_success_message">Authentication succeeded! ✅</string>
-    <string name="biometric_found_message">Biometric found. Touch your finger on scanner 👆🏻</string>
+    <string name="biometric_found_message">Biometric Found. 🔐</string>
     <string name="biometric_not_found_message">Biometric Not Found</string>
     <string name="retrying">Retrying</string>
     <string name="something_went_wrong">Something went wrong</string>

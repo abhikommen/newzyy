@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.bbc.criticaltechworks.BuildConfig
-import com.bbc.criticaltechworks.common.utils.VerticalSpacer
+import com.bbc.criticaltechworks.common.components.VerticalSpacer
 import com.bbc.criticaltechworks.common.utils.day
 import com.bbc.criticaltechworks.common.utils.monthString
 import com.bbc.criticaltechworks.common.utils.year

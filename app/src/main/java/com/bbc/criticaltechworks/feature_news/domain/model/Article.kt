@@ -4,16 +4,17 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.bbc.criticaltechworks.common.utils.JsonParcelable
 import kotlinx.parcelize.Parcelize
+import java.util.Date
 
 @Entity(tableName = "article")
 @Parcelize
 data class Article(
     @PrimaryKey(autoGenerate = false)
-    val publishedAt: String,
-    val author: String?,
-    val content: String?,
-    val description: String?,
-    val title: String?,
-    val url: String?,
-    val urlToImage: String?
+    val publishedAt: Date,
+    val author: String? = null,
+    val content: String? = null,
+    val description: String? = null,
+    val title: String? = null,
+    val url: String? = null,
+    val urlToImage: String? = null
 ) : JsonParcelable()

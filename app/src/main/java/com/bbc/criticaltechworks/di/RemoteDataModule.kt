@@ -4,7 +4,8 @@ import com.bbc.criticaltechworks.BuildConfig
 import com.bbc.criticaltechworks.feature_news.data.data_source.remote.ApiService
 import com.bbc.criticaltechworks.feature_news.data.data_source.remote.api.RemoteDataSource
 import com.bbc.criticaltechworks.feature_news.data.data_source.remote.api.RemoteDataSourceImpl
-import com.bbc.criticaltechworks.util.NetworkInterceptor
+import com.bbc.criticaltechworks.common.utils.NetworkInterceptor
+import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -26,7 +27,11 @@ object RemoteDataModule {
         clientBuilder.connectTimeout(60, TimeUnit.SECONDS)
         clientBuilder.addInterceptor(NetworkInterceptor())
         return Retrofit.Builder().baseUrl(BuildConfig.BASE_URL).client(clientBuilder.build())
-            .addConverterFactory(GsonConverterFactory.create()).build()
+            .addConverterFactory(
+                GsonConverterFactory.create(
+                    GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss").create()
+                )
+            ).build()
     }
 
     @Provides

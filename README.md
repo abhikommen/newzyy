@@ -13,7 +13,7 @@ The trick of the project is to demonstrate best practices, provide a set of guid
 
 ***You can Install and test latest Newzyy Android app 👇***
 
-[![Newzyy](https://img.shields.io/badge/Blogfy✅-APK-red.svg?style=for-the-badge&logo=android)](https://github.com/Zlagi/Blogfy/releases)
+[![Newzyy](https://img.shields.io/badge/Newzyy%20%F0%9F%93%B0-APK-red.svg?style=for-the-badge&logo=android)](https://github.com/abhikommen/newzyy/releases/tag/v1.0.1)
 
 ## 💡 API:
 
@@ -35,7 +35,7 @@ https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=$API_KEY 🔥
 
 ## Constraints fulfilled :
 
-- The app is written in Kotlin. 
+- The app is written in Kotlin.
 - The app is targeting latest android version platform 33.
 - The app must is built using Android Studio 3.0+.
 - The app supports both portrait and landscape modes without crashing at any time.
@@ -49,9 +49,9 @@ https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=$API_KEY 🔥
 - News provider name should be showed as a screen title 2. Headlines are presented in a list format. ✅
 - Each cell should present the headline title ✅
 - Headlines must be sorted by date ✅
-- The user must be able to scroll through the list of headlines ✅ 
--Each cell should present headline image, if available (download and cache it, don’t
-bundle it) ✅
+- The user must be able to scroll through the list of headlines ✅
+  -Each cell should present headline image, if available (download and cache it, don’t
+  bundle it) ✅
 
 ## Story 2: When the user taps on a headline, he should be taken to a new screen
 

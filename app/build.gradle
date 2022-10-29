@@ -11,13 +11,13 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.bbc.criticaltechworks"
+        applicationId "com.news.criticaltechworks"
         minSdk 21
         targetSdk 33
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "com.bbc.criticaltechworks.HiltTestRunner"
+        testInstrumentationRunner "com.news.criticaltechworks.HiltTestRunner"
         vectorDrawables {
             useSupportLibrary true
         }

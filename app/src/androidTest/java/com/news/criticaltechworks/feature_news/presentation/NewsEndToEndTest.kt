@@ -82,7 +82,7 @@ class NewsEndAppTest {
     }
 
     @Test
-    fun bioMetric() {
+    fun endToEnd() {
 
         val context = ApplicationProvider.getApplicationContext<Context>()
 

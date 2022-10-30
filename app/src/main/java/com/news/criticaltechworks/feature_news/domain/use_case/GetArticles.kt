@@ -21,14 +21,16 @@ class GetArticles(
         try {
             emit(DataState.Loading)
             val remoteArticles = newsRepository.getRemoteArticle().sortedByDescending {
-                it.publishedAt
+                it.publishedAt.time
             }
             newsRepository.saveArticleInCache(remoteArticles)
             emit(DataState.Success(remoteArticles))
         } catch (e: Exception) {
             val localSavedArticles = newsRepository.getCachedArticle()
             if (localSavedArticles.isNotEmpty()) {
-                emit((DataState.Success(localSavedArticles)))
+                emit((DataState.Success(localSavedArticles.sortedByDescending {
+                    it.publishedAt.time
+                })))
             } else {
                 when (e) {
                     is UnknownHostException -> emit(DataState.Error(Exception("Internet Not Found. ")))

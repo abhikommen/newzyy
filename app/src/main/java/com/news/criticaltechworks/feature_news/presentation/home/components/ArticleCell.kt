@@ -57,16 +57,17 @@ fun ArticleCell(
         ArticleMetaData(article)
         VerticalSpacer(size = 10)
         article.urlToImage?.let {
-            AsyncImage(
-                model = scrollFadeImage(context, article.urlToImage),
-                contentDescription = article.title,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(200.dp)
-                    .clip(shape = RoundedCornerShape(10.dp))
-                    .background(MaterialTheme.colors.onBackground.ten())
-            )
+            if (it.isNotEmpty())
+                AsyncImage(
+                    model = scrollFadeImage(context, article.urlToImage),
+                    contentDescription = article.title,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(200.dp)
+                        .clip(shape = RoundedCornerShape(10.dp))
+                        .background(MaterialTheme.colors.onBackground.ten())
+                )
         }
         VerticalSpacer(size = 16)
         Divider()

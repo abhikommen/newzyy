@@ -34,7 +34,7 @@ https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=$API_KEY 🔥
 
 ## Project Structure :
 
-<img src="https://user-images.githubusercontent.com/30040958/198729388-10e7f079-d6bd-4aac-87b3-40250039770e.png">
+<img src="https://user-images.githubusercontent.com/30040958/199174003-a78091e0-a392-45d4-91fd-1b94feca5995.png">
 
 ## Constraints fulfilled :
 
